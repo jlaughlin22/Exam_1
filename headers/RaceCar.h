@@ -14,14 +14,15 @@
 #define RACECAR_H
 #include "Vehicle.h"
 using std::string;
+using std::endl;
+using std::cout;
 
 namespace Exam1{
     class RaceCar : public Vehicle {
         public:
         RaceCar(string color);
+        void doABurnout();
         string Description();
-        //Top speed: 250mph
-        //Wheel radius: 305mm
     };
 }
 #endif // RACECAR_H

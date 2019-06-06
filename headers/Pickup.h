@@ -14,16 +14,18 @@
 #define PICKUP_H
 #include "Vehicle.h"
 using std::string;
+using std::cout;
+using std::cin;
 
 namespace Exam1{
     class Pickup : public Vehicle {
         private:
         int hauling_capacity;
+        string currentlyHauling;
         public:
         Pickup(string color, int capacity);
+        void addCurrentHual();
         string Description();
-        //Top speed: 85mph
-        //Wheel radius: 432mm
     };
 }
 #endif // PICKUP_H

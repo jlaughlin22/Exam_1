@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <typeinfo>
 #include "Vehicle.h"
 #include "RaceCar.h"
 #include "Pickup.h"
@@ -28,31 +29,22 @@ using namespace Exam1;
 // Be sure to use a separate header file and a CPP file for each class.
 
 int main() {
-    // STEP 3: Assign ONE RaceCar, ONE Sedan, AND ONE Pickup object to each of the elements
-    // in the Garage array. Remember the classes are defined in the namespace Exam1.
-
-    //Garage[0] = ???
-
-    //Garage[1] = ???
-
-    //Garage[2] = ???
     Vehicle * Garage[3];
     Garage[0] = new RaceCar("Red");
     Garage[1] = new Pickup("Green", 500);
     Garage[2] = new Sedan("Blue", 8);
-    
-
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++){
         cout << Garage[i]->Description() << endl;
-    {
-
-    // The method Description() should display an output like
-
-    // "I am a red sedan (or racecar/pickup) and I can go 95 (or 250 or 85) mph"
-
-    
-
-    // add code to execute the "special" functionality of each class
-
+        if(typeid(*Garage[i]) == typeid(Pickup)){
+            dynamic_cast<Pickup*>(Garage[i])->addCurrentHual();
+        }else if(typeid(*Garage[i]) == typeid(RaceCar)){
+            dynamic_cast<RaceCar*>(Garage[i])->doABurnout();
+        }else if(typeid(*Garage[i]) == typeid(Sedan)){
+            int numPassengers = 0;
+            cout << "How many passengers would you like to enter the Sedan? ";
+            cin >> numPassengers;
+            dynamic_cast<Sedan*>(Garage[i])->addPassenger(numPassengers);
+            dynamic_cast<Sedan*>(Garage[i])->addBikeToRack();
+        }
     }
 }

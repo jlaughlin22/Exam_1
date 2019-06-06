@@ -26,12 +26,10 @@ namespace Exam1{
     class Vehicle{
         protected:
         string _color;
-        int _topspeed;
         vector<Wheel> wheels;
         public:
         Vehicle(string color);
         virtual string Description() = 0;
-
     };
 }
 #endif // VEHICLE_H

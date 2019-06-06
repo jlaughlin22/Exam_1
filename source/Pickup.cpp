@@ -13,9 +13,19 @@
 #include "Pickup.h"
 
 namespace Exam1{
-    Pickup::Pickup(string color, int capacity): hauling_capacity(capacity), Vehicle(color){};
+    Pickup::Pickup(string color, int capacity): hauling_capacity(capacity), Vehicle(color){
+        for (int i = 0; i < 4; i++){
+            wheels.push_back(Wheel(432));
+        }
+    };
 
     string Pickup::Description(){
-        return "This is a pickup.";
+        return "I am a " + _color + " Pickup and I can go 85mph. I have " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
+    }
+
+    void Pickup::addCurrentHual(){
+        cout << "Enter what the Pickup is hauling: ";
+        cin >> currentlyHauling;
+        cout << "The Pickup is now hauling " << currentlyHauling << ".\n\n";
     }
 }

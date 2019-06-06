@@ -15,16 +15,20 @@
 
 #include "Vehicle.h"
 using std::string;
+using std::cout;
+using std::cin;
 
 namespace Exam1{
     class Sedan : public Vehicle {
         private:
         int number_of_seats;
+        int number_of_bikes;
+        int number_of_passengers;
         public:
         Sedan(string color, int seats);
+        void addBikeToRack();
+        void addPassenger(int numPassengers);
         string Description();
-        //Top speed: 95mph
-        //Wheel radius: 381mm
     };
 }
 #endif // SEDAN_H

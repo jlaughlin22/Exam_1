@@ -13,4 +13,8 @@
 #include "Wheel.h"
 namespace Exam1{
     Wheel::Wheel(int radius) { _radius = radius; }
+
+    string Wheel::getRadius(){
+        return std::to_string(_radius);
+    }
 }

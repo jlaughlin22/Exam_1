@@ -11,6 +11,8 @@
 //I affirm that all code given below was written solely by me, <Jonathan Laughlin>, and that any help I received adhered to the rules stated for this exam.
 #ifndef WHEEL_H
 #define WHEEL_H
+#include <iostream>
+using std::string;
 
 namespace Exam1{
     class Wheel{
@@ -18,6 +20,7 @@ namespace Exam1{
         int _radius;
         public:
         Wheel(int radius);
+        string getRadius();
     };
 }
 #endif // WHEEL_H

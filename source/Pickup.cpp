@@ -13,3 +13,7 @@
 #include "Pickup.h"
 
 Pickup::Pickup(string color, int capacity): hauling_capacity(capacity), Vehicle(color){};
+
+string Pickup::Description(){
+        return "This is a pickup.";
+}

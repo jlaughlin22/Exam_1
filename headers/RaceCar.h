@@ -14,16 +14,16 @@
 #define RACECAR_H
 #include <iostream>
 #include "Vehicle.h"
+//namespace Exam1{
+    class RaceCar : public Vehicle {
+        public:
+        RaceCar(string color);
+        string Description();
 
-class RaceCar : public Vehicle {
-    public:
-    RaceCar(string color);
-    //string Description();
+    //Top speed: 250mph
 
-//Top speed: 250mph
+    //Wheel radius: 305mm
 
-//Wheel radius: 305mm
-
-};
-
+    };
+//}
 #endif // RACECAR_H

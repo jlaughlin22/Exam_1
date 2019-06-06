@@ -21,7 +21,7 @@ class Pickup : public Vehicle {
         int hauling_capacity;
     public:
         Pickup(string color, int capacity);
-        //string Description();
+        string Description();
 //Top speed: 85mph
 
 //Wheel radius: 432mm

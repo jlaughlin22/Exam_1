@@ -10,17 +10,18 @@
 
 //I affirm that all code given below was written solely by me, <Jonathan Laughlin>, and that any help I received adhered to the rules stated for this exam.
 
-
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Wheel.h"
 #include "Vehicle.h"
-
+#include "RaceCar.h"
+#include "Pickup.h"
+#include "Sedan.h"
 using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
+//using namespace Exam1;
 
 // STEP 2: Define the RaceCar, Sedan, and Pickup classes as described
 
@@ -29,33 +30,32 @@ using std::vector;
 // Be sure to use a separate header file and a CPP file for each class.
 
 int main()
-
 {
+    Vehicle * Garage[3];
+    Garage[0] = new RaceCar("Red");
+    Garage[2] = new Pickup("Green", 500);
+    Garage[2] = new Sedan("Blue", 8);
+    // STEP 3: Assign ONE RaceCar, ONE Sedan, AND ONE Pickup object to each of the elements
 
-Vehicle * Garage[3];
+    // in the Garage array. Remember the classes are defined in the namespace Exam1.
 
-// STEP 3: Assign ONE RaceCar, ONE Sedan, AND ONE Pickup object to each of the elements
+    //Garage[0] = ???
 
-// in the Garage array. Remember the classes are defined in the namespace Exam1.
+    //Garage[1] = ???
 
-//Garage[0] = ???
+    //Garage[2] = ???
 
-//Garage[1] = ???
+    for (int i = 0; i < 3; ++i)
+        cout << Garage[i]->Description() << endl;
+    {
 
-//Garage[2] = ???
+    // The method Description() should display an output like
 
-for (int i = 0; i < 3; ++i)
+    // "I am a red sedan (or racecar/pickup) and I can go 95 (or 250 or 85) mph"
 
-{
+    
 
-// The method Description() should display an output like
+    // add code to execute the "special" functionality of each class
 
-// "I am a red sedan (or racecar/pickup) and I can go 95 (or 250 or 85) mph"
-
-cout << Garage[i]->Description();
-
-// add code to execute the "special" functionality of each class
-
-}
-
+    }
 }

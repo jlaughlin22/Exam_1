@@ -22,7 +22,7 @@ class Sedan : public Vehicle {
         int number_of_seats;
     public:
         Sedan(string color, int seats);
-        //string Description();
+        string Description();
 
 //Top speed: 95mph
 

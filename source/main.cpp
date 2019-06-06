@@ -14,82 +14,19 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Wheel.h"
+#include "Vehicle.h"
+
 using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
-
-class Wheel
-
-{
-
-private:
-
-int _radius;
-
-public:
-
-Wheel(int radius) { _radius = radius; }
-
-};
-
-// STEP 1: Complete the implementation of the Vehicle base class
-
-// as described in the UML diagram
-
-class Vehicle
-
-{
-
-protected:
-
-string _color;
-
-int _topspeed;
-
-vector<Wheel> wheels;
-
-public:
-
-Vehicle(string color) {
-
-// Complete the implementation
-
-}
-
-virtual string Description() = 0;
-
-};
 
 // STEP 2: Define the RaceCar, Sedan, and Pickup classes as described
 
 // in the UML diagram. Make sure to add functionality unique to each kind of class.
 
 // Be sure to use a separate header file and a CPP file for each class.
-
-class RaceCar : public Vehicle {
-
-//Top speed: 250mph
-
-//Wheel radius: 305mm
-
-};
-
-class Sedan : public Vehicle {
-
-//Top speed: 95mph
-
-//Wheel radius: 381mm
-
-};
-
-class Pickup : public Vehicle {
-
-//Top speed: 85mph
-
-//Wheel radius: 432mm
-
-};
 
 int main()
 

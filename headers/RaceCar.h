@@ -9,3 +9,21 @@
 ///////////////////////////////////////////////////////
 
 //I affirm that all code given below was written solely by me, <Jonathan Laughlin>, and that any help I received adhered to the rules stated for this exam.
+
+#ifndef RACECAR_H
+#define RACECAR_H
+#include <iostream>
+#include "Vehicle.h"
+
+class RaceCar : public Vehicle {
+    public:
+    RaceCar(string color);
+    //string Description();
+
+//Top speed: 250mph
+
+//Wheel radius: 305mm
+
+};
+
+#endif // RACECAR_H

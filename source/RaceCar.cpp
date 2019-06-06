@@ -11,10 +11,10 @@
 //I affirm that all code given below was written solely by me, <Jonathan Laughlin>, and that any help I received adhered to the rules stated for this exam.
 
 #include "RaceCar.h"
-//namespace Exam1{
+namespace Exam1{
     RaceCar::RaceCar(string color): Vehicle(color){};
 
     string RaceCar::Description(){
         return "This is a racecar.";
     }
-//}
+}

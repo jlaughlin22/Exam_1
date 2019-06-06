@@ -12,20 +12,18 @@
 
 #ifndef PICKUP_H
 #define PICKUP_H
-#include <iostream>
 #include "Vehicle.h"
 using std::string;
 
-class Pickup : public Vehicle {
-    private:
+namespace Exam1{
+    class Pickup : public Vehicle {
+        private:
         int hauling_capacity;
-    public:
+        public:
         Pickup(string color, int capacity);
         string Description();
-//Top speed: 85mph
-
-//Wheel radius: 432mm
-
-};
-
+        //Top speed: 85mph
+        //Wheel radius: 432mm
+    };
+}
 #endif // PICKUP_H

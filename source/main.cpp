@@ -21,22 +21,14 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
-//using namespace Exam1;
+using namespace Exam1;
 
 // STEP 2: Define the RaceCar, Sedan, and Pickup classes as described
-
 // in the UML diagram. Make sure to add functionality unique to each kind of class.
-
 // Be sure to use a separate header file and a CPP file for each class.
 
-int main()
-{
-    Vehicle * Garage[3];
-    Garage[0] = new RaceCar("Red");
-    Garage[2] = new Pickup("Green", 500);
-    Garage[2] = new Sedan("Blue", 8);
+int main() {
     // STEP 3: Assign ONE RaceCar, ONE Sedan, AND ONE Pickup object to each of the elements
-
     // in the Garage array. Remember the classes are defined in the namespace Exam1.
 
     //Garage[0] = ???
@@ -44,8 +36,13 @@ int main()
     //Garage[1] = ???
 
     //Garage[2] = ???
+    Vehicle * Garage[3];
+    Garage[0] = new RaceCar("Red");
+    Garage[1] = new Pickup("Green", 500);
+    Garage[2] = new Sedan("Blue", 8);
+    
 
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < 3; i++)
         cout << Garage[i]->Description() << endl;
     {
 

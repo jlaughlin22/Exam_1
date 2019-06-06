@@ -13,26 +13,25 @@
 // STEP 1: Complete the implementation of the Vehicle base class
 
 // as described in the UML diagram
-#ifndef VEHICLE_H
-#define VEHICE_H
 
+#ifndef VEHICLE_H
+#define VEHICLE_H
 #include <iostream>
 #include <vector>
 #include "Wheel.h"
 using std::string;
 using std::vector;
 
-//namespace Exam1{
-    class Vehicle
-    {
+namespace Exam1{
+    class Vehicle{
         protected:
-            string _color;
-            int _topspeed;
-            vector<Wheel> wheels;
+        string _color;
+        int _topspeed;
+        vector<Wheel> wheels;
         public:
-            Vehicle(string color);
-            virtual string Description() = 0;
+        Vehicle(string color);
+        virtual string Description() = 0;
 
     };
-//}
+}
 #endif // VEHICLE_H

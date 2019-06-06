@@ -12,22 +12,19 @@
 
 #ifndef SEDAN_H
 #define SEDAN_H
-#include <iostream>
+
 #include "Vehicle.h"
 using std::string;
 
-class Sedan : public Vehicle {
-
-    private:
+namespace Exam1{
+    class Sedan : public Vehicle {
+        private:
         int number_of_seats;
-    public:
+        public:
         Sedan(string color, int seats);
         string Description();
-
-//Top speed: 95mph
-
-//Wheel radius: 381mm
-
-};
-
+        //Top speed: 95mph
+        //Wheel radius: 381mm
+    };
+}
 #endif // SEDAN_H

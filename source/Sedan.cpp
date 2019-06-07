@@ -22,12 +22,21 @@ namespace Exam1{
     
     void Sedan::addPassenger(int numPassengers){
         number_of_passengers = numPassengers;
-        while(number_of_passengers > number_of_seats && number_of_passengers <= 0){
-            cout << "There are not enough seats in the Sedan for that many passengers! How many passengers would you like to enter the Sedan (max number of passengers is " << number_of_seats << ")? ";
+        while(number_of_passengers > number_of_seats && number_of_passengers < 0){
+            if(number_of_passengers > 0){
+                cout << "There are not enough seats in the Sedan for that many passengers! How many passengers would you like to enter the Sedan (max number of passengers is " << number_of_seats << ")? ";
+            }else{
+                cout << "Oops you can't have a negative number of passengersHow many passengers would you like to enter the Sedan (min number of passengers is 0)? ";
+            }
             cin >> number_of_passengers;
         }
-        cout << number_of_passengers << " passengers have just entered the Sedan.\n";
+        if(number_of_passengers == 0){
+            cout << "No passengers entered the Sedan.";
+        }else{
+            cout << number_of_passengers << " passengers have just entered the Sedan.\n";
+        }
     }
+    
     void Sedan::addBikeToRack(){
         if(number_of_passengers/2 != 0){
             cout << number_of_passengers/2 << " of the passengers placed a bike on the bike rack attached to the Sedan.\n";

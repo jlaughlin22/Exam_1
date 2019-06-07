@@ -19,26 +19,49 @@
 #include "RaceCar.h"
 #include "Pickup.h"
 #include "Sedan.h"
+#define SAFE true
+#define UNSAFE false
 using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
 using namespace Exam1;
 
-// STEP 2: Define the RaceCar, Sedan, and Pickup classes as described
-// in the UML diagram. Make sure to add functionality unique to each kind of class.
-// Be sure to use a separate header file and a CPP file for each class.
-
 int main() {
     Vehicle * Garage[3];
-    try{
-        Garage[0] = new RaceCar("Red");
-        Garage[1] = new Pickup("Green", 500);
-        Garage[2] = new Sedan("Blue", 10);
-    }
-    catch (std::invalid_argument &x){
-        cout << "Oops an error occurred there is an invalid arguement somewhere." << endl;
-        return 0;
+    bool Catch = UNSAFE;
+    int resetCatch = 1;
+    int seats;
+    int pickupCap;
+    string pickupColor, raceCarColor, sedanColor;
+    while(Catch != SAFE){
+        try{
+            if(resetCatch == 1){
+                cout << "What color is the RaceCar? ";
+                cin >> raceCarColor;
+                Garage[0] = new RaceCar(raceCarColor);
+                resetCatch++;
+            }
+            if(resetCatch == 2){
+                cout << "\nWhat color is the Pickup? ";
+                cin >> pickupColor;
+                cout << "\nHow much weight (lbs) can the Pickup hual? ";
+                cin >> pickupCap;
+                Garage[1] = new Pickup(pickupColor, pickupCap);
+                resetCatch++;
+            }
+            if(resetCatch == 3){
+                cout << "\nWhat color is the Sedan? ";
+                cin >> sedanColor;
+                cout << "\nHow many Seats does the Sedan have? ";
+                cin >> seats;
+                Garage[2] = new Sedan(sedanColor, seats);   
+            }
+            Catch = SAFE;         
+        }
+        catch (std::invalid_argument &x){
+            cout << "Oops an error occurred the previous value entered is invalid." << endl;
+        }
     }
     for (int i = 0; i < 3; i++){
         cout << Garage[i]->Description() << endl;

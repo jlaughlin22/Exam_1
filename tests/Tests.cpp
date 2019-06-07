@@ -1,4 +1,4 @@
-/*
+/* //uncomment tests to build them
 
 #include "Pickup.h"
 #include "RaceCar.h"

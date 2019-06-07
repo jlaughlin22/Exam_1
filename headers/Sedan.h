@@ -31,8 +31,9 @@ namespace Exam1{
         //input: 
         //      color - holds the color of the vehicle
         //      seats - hold sthe number of seats the sedan has
+        //      rimRadius - holds the radius of the wheels
         //output: sets values of number_of_seats
-        Sedan(string color, int seats);
+        Sedan(string color, int seats, int rimRadius);
 
         //states how many bikes were added to the bike rack
         //input: NA

@@ -19,13 +19,14 @@ namespace Exam1{
     //input: 
     //      color - holds the color of the vehicle
     //      capacity - holds the hauling capacity of the truck
+    //      rimRadius - holds the radius of the wheels
     //output: editing of values ofr instance
-    Pickup::Pickup(string color, int capacity): hauling_capacity(capacity), Vehicle(color){
+    Pickup::Pickup(string color, int capacity, int rimRadius): hauling_capacity(capacity), Vehicle(color){
         if(capacity < 0){//pickup cant have a negative hauling capacity
             throw invalid_argument("The truck can not have negative carrying capacity.");//throw an invalid arguement
         }
-        for (int i = 0; i < 4; i++){//adds 4 wheels of 432mm radius
-            wheels.push_back(Wheel(432));
+        for (int i = 0; i < 4; i++){//adds 4 wheels of rimRadius mm radius
+            wheels.push_back(Wheel(rimRadius));
         }
     };
 
@@ -33,15 +34,15 @@ namespace Exam1{
     //input: NA
     //output: Returns a string contains info about pickup
     string Pickup::Description(){
-        return "I am a " + _color + " Pickup and I can go 85mph. I have " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
+        return "\nI am a " + _color + " Pickup and I can go 85mph. I have " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
     }
 
     //Changes what the pickup is currently hauling 
     //input: NA
     //output: cout statements
     void Pickup::addCurrentHual(){
-        cout << "Enter what the Pickup is hauling: ";
+        cout << "What is the Pickup hauling? ";
         cin >> currentlyHauling;
-        cout << "The Pickup is now hauling " << currentlyHauling << ".\n\n";
+        cout << "The Pickup is now hauling " << currentlyHauling << ".\n";
     }
 }

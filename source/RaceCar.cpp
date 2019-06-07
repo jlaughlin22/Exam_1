@@ -17,10 +17,11 @@ namespace Exam1{
     // calls vehicle constructor
     //input:
     //      color - holds the color of the vehicle
+    //      rimRadius - holds the radius of the wheels
     //output: Modifies values of instance
-    RaceCar::RaceCar(string color): Vehicle(color){
-        for (int i = 0; i < 4; i++){//adds 4 wheels to instance of 305mm radius 
-            wheels.push_back(Wheel(305));
+    RaceCar::RaceCar(string color, int rimRadius): Vehicle(color){
+        for (int i = 0; i < 4; i++){//adds 4 wheels to instance of rimRadius mm radius 
+            wheels.push_back(Wheel(rimRadius));
         }
     }
 
@@ -28,13 +29,13 @@ namespace Exam1{
     //input: NA
     //output: Cout statements
     void RaceCar::doABurnout(){
-        cout << "SCREEEECH!!!  The RaceCar does a burnout and speeds off!\n" << endl;
+        cout << "SCREEEECH!!!  The RaceCar does a burnout and speeds off!" << endl;
     }
 
     //Returns a detailed description of the racecar including its color, topspeed, radius of wheels, number of wheels 
     //input: NA
     //output: Returns a string contains info about racecar
     string RaceCar::Description(){
-        return "I am a " + _color + " RaceCar and I can go 250mph. I have " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
+        return "\nI am a " + _color + " RaceCar and I can go 250mph. I have " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
     }
 }

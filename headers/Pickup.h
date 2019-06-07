@@ -29,8 +29,9 @@ namespace Exam1{
         //input: 
         //      color - holds the color of the vehicle
         //      capacity - holds the hauling capacity of the truck
+        //      rimRadius - holds the radius of the wheels
         //output: editing of values ofr instance
-        Pickup(string color, int capacity);
+        Pickup(string color, int capacity, int rimRadius);
 
         //Changes what the pickup is currently hauling 
         //input: NA

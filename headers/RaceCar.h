@@ -25,8 +25,9 @@ namespace Exam1{
         // calls vehicle constructor
         //input:
         //      color - holds the color of the vehicle
+        //      rimRadius - holds the radius of the wheels
         //output: Modifies values of instance
-        RaceCar(string color);
+        RaceCar(string color, int rimRadius);
 
         //cout statement stating the race car does a burnout
         //input: NA

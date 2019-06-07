@@ -9,7 +9,6 @@
 ///////////////////////////////////////////////////////
 
 //I affirm that all code given below was written solely by me, <Jonathan Laughlin>, and that any help I received adhered to the rules stated for this exam.
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -39,7 +38,7 @@ int main() {
             if(resetCatch == 1){//used to repeat only what has an invalid arguement
                 cout << "What color is the RaceCar? ";
                 cin >> raceCarColor;//get race car color
-                Garage[0] = new RaceCar(raceCarColor);//create new racecar with info provided
+                Garage[0] = new RaceCar(raceCarColor, 305);//create new racecar with info provided
                 resetCatch++;//this block safe increment catch by 1
             }
             if(resetCatch == 2){//used to repeat only what has an invalid arguement
@@ -47,7 +46,7 @@ int main() {
                 cin >> pickupColor;//get pickup color
                 cout << "How much weight (lbs) can the Pickup hual? ";
                 cin >> pickupCap;//get capacity of pickup
-                Garage[1] = new Pickup(pickupColor, pickupCap);//create new pickup with info provided
+                Garage[1] = new Pickup(pickupColor, pickupCap, 432);//create new pickup with info provided
                 resetCatch++;//this block safe increment catch by 1
             }
             if(resetCatch == 3){//used to repeat only what has an invalid arguement
@@ -55,7 +54,7 @@ int main() {
                 cin >> sedanColor;// get color of sedan
                 cout << "How many seats does the Sedan have? ";
                 cin >> seats;//gather number of seats in sedan
-                Garage[2] = new Sedan(sedanColor, seats);// create new sedan with info provided  
+                Garage[2] = new Sedan(sedanColor, seats, 381);// create new sedan with info provided  
             }
             Catch = SAFE;//try block is safe       
         }
@@ -79,6 +78,4 @@ int main() {
             dynamic_cast<Sedan*>(Garage[i])->addBikeToRack();
         }
     }
-
-    delete [] Garage;//clear up memory
 }

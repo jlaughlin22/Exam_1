@@ -16,13 +16,14 @@ namespace Exam1{
     //input: 
     //      color - holds the color of the vehicle
     //      seats - hold sthe number of seats the sedan has
+    //      rimRadius - holds the radius of the wheels
     //output: sets values of number_of_seats
-    Sedan::Sedan(string color, int seats): number_of_seats(seats), Vehicle(color){
+    Sedan::Sedan(string color, int seats, int rimRadius): number_of_seats(seats), Vehicle(color){
         if(number_of_seats <= 0){//cant have 0 or less seats in a car
             throw invalid_argument("There are no seats in the car!");
         }
-        for (int i = 0; i < 4; i++){// adds 4 wheels of 381mm radius to instance of sedan
-            wheels.push_back(Wheel(381));
+        for (int i = 0; i < 4; i++){// adds 4 wheels of rimRadius mm  to instance of sedan
+            wheels.push_back(Wheel(rimRadius));
         }
     };
     
@@ -60,6 +61,6 @@ namespace Exam1{
     //input: NA
     //output: Returns a string contains info about sedan
     string Sedan::Description(){
-        return "I am a " + _color + " Sedan and I can go 95mph. I have " + std::to_string(number_of_seats) + " seats and " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
+        return "\nI am a " + _color + " Sedan and I can go 95mph. I have " + std::to_string(number_of_seats) + " seats and " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
     }
 }

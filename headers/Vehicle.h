@@ -25,10 +25,16 @@ using std::vector;
 namespace Exam1{
     class Vehicle{
         protected:
-        string _color;
-        vector<Wheel> wheels;
+        string _color;//holds color of vehicle
+        vector<Wheel> wheels;//vector of wheel instances
         public:
+        //constructor
+        //sets color of vehicle
+        //input: color - hold the color of the vehicle
+        //output: sets value of _color
         Vehicle(string color);
+        
+        //pure virtula function all subclasses must have it
         virtual string Description() = 0;
     };
 }

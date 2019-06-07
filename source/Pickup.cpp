@@ -31,7 +31,7 @@ namespace Exam1{
 
     //Returns a detailed description of the pickup including its color, topspeed, radius of wheels, number of wheels 
     //input: NA
-    //output: Returns a string contains info about truck
+    //output: Returns a string contains info about pickup
     string Pickup::Description(){
         return "I am a " + _color + " Pickup and I can go 85mph. I have " + std::to_string(wheels.size())  + " wheels each with a radius of " + wheels[0].getRadius() + "mm.";
     }

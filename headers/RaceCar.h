@@ -20,8 +20,22 @@ using std::cout;
 namespace Exam1{
     class RaceCar : public Vehicle {
         public:
+
+        //constructor
+        // calls vehicle constructor
+        //input:
+        //      color - holds the color of the vehicle
+        //output: Modifies values of instance
         RaceCar(string color);
+
+        //cout statement stating the race car does a burnout
+        //input: NA
+        //output: Cout statements
         void doABurnout();
+
+        //Returns a detailed description of the racecar including its color, topspeed, radius of wheels, number of wheels 
+        //input: NA
+        //output: Returns a string contains info about racecar
         string Description();
     };
 }

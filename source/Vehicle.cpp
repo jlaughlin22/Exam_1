@@ -12,5 +12,10 @@
 
 #include "Vehicle.h"
 namespace Exam1{
+
+    //constructor
+    //sets color of vehicle
+    //input: color - hold the color of the vehicle
+    //output: sets value of _color
     Vehicle::Vehicle(string color): _color(color) {};
 }

@@ -21,13 +21,32 @@ using std::cin;
 namespace Exam1{
     class Sedan : public Vehicle {
         private:
-        int number_of_seats;
-        int number_of_bikes;
-        int number_of_passengers;
+        int number_of_seats;//holds the number of seats the sedan has
+        int number_of_bikes;//holds the numbe rof bikes attacked to bike rack on sedan
+        int number_of_passengers;//holds the number of passengers
+
         public:
+        //constructor 
+        //sets value of seats for instance of sedan and class the vehicle class constructor
+        //input: 
+        //      color - holds the color of the vehicle
+        //      seats - hold sthe number of seats the sedan has
+        //output: sets values of number_of_seats
         Sedan(string color, int seats);
+
+        //states how many bikes were added to the bike rack
+        //input: NA
+        //output: cout statement
         void addBikeToRack();
+
+        //adds passengers to sedan
+        //input: numPassengers - initial passengers entered
+        //output: cout statements
         void addPassenger(int numPassengers);
+
+        //Returns a detailed description of the sedan including its color, topspeed, number of seats, radius of wheels, number of wheels 
+        //input: NA
+        //output: Returns a string contains info about sedan
         string Description();
     };
 }

@@ -39,7 +39,7 @@ namespace Exam1{
 
         //Returns a detailed description of the pickup including its color, topspeed, radius of wheels, number of wheels 
         //input: NA
-        //output: Returns a string contains info about truck
+        //output: Returns a string contains info about pickup
         string Description();
     };
 }

@@ -8,7 +8,7 @@
 // This code contains my code for Exam 1 for CS273
 ///////////////////////////////////////////////////////
 
-/*//uncomment tests to build them
+/* //uncomment tests to build them
 
 #include "Pickup.h"
 #include "RaceCar.h"
@@ -88,5 +88,4 @@ int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
-
 */

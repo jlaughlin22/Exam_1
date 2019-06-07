@@ -14,6 +14,7 @@
 #include <string>
 #include <vector>
 #include <typeinfo>
+#include <stdexcept>
 #include "Vehicle.h"
 #include "RaceCar.h"
 #include "Pickup.h"
@@ -30,9 +31,15 @@ using namespace Exam1;
 
 int main() {
     Vehicle * Garage[3];
-    Garage[0] = new RaceCar("Red");
-    Garage[1] = new Pickup("Green", 500);
-    Garage[2] = new Sedan("Blue", 8);
+    try{
+        Garage[0] = new RaceCar("Red");
+        Garage[1] = new Pickup("Green", 500);
+        Garage[2] = new Sedan("Blue", 10);
+    }
+    catch (std::invalid_argument &x){
+        cout << "Oops an error occurred there is an invalid arguement somewhere." << endl;
+        return 0;
+    }
     for (int i = 0; i < 3; i++){
         cout << Garage[i]->Description() << endl;
         if(typeid(*Garage[i]) == typeid(Pickup)){
@@ -40,11 +47,12 @@ int main() {
         }else if(typeid(*Garage[i]) == typeid(RaceCar)){
             dynamic_cast<RaceCar*>(Garage[i])->doABurnout();
         }else if(typeid(*Garage[i]) == typeid(Sedan)){
-            int numPassengers = 0;
+            int numPassengers;
             cout << "How many passengers would you like to enter the Sedan? ";
             cin >> numPassengers;
             dynamic_cast<Sedan*>(Garage[i])->addPassenger(numPassengers);
             dynamic_cast<Sedan*>(Garage[i])->addBikeToRack();
         }
     }
+    
 }

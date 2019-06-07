@@ -12,6 +12,9 @@
 #include "Sedan.h"
 namespace Exam1{
     Sedan::Sedan(string color, int seats): number_of_seats(seats), Vehicle(color){
+        if(number_of_seats <= 0){
+            throw invalid_argument("There are no seats in the car!");
+        }
         for (int i = 0; i < 4; i++){
             wheels.push_back(Wheel(381));
         }
@@ -19,7 +22,7 @@ namespace Exam1{
     
     void Sedan::addPassenger(int numPassengers){
         number_of_passengers = numPassengers;
-        while(number_of_passengers > number_of_seats){
+        while(number_of_passengers > number_of_seats && number_of_passengers <= 0){
             cout << "There are not enough seats in the Sedan for that many passengers! How many passengers would you like to enter the Sedan (max number of passengers is " << number_of_seats << ")? ";
             cin >> number_of_passengers;
         }

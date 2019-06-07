@@ -14,6 +14,9 @@
 
 namespace Exam1{
     Pickup::Pickup(string color, int capacity): hauling_capacity(capacity), Vehicle(color){
+        if(capacity < 0){
+            throw invalid_argument("The truck can not have negative carrying capacity.");
+        }
         for (int i = 0; i < 4; i++){
             wheels.push_back(Wheel(432));
         }

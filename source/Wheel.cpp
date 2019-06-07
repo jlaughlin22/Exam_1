@@ -12,7 +12,12 @@
 
 #include "Wheel.h"
 namespace Exam1{
-    Wheel::Wheel(int radius) { _radius = radius; }
+    Wheel::Wheel(int radius) {
+        if( radius <= 0 ){
+            throw std::invalid_argument("Wheel does not exist!");
+        } 
+        _radius = radius; 
+    }
 
     string Wheel::getRadius(){
         return std::to_string(_radius);

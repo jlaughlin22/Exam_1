@@ -12,7 +12,9 @@
 #ifndef WHEEL_H
 #define WHEEL_H
 #include <iostream>
+#include <stdexcept>
 using std::string;
+using std::invalid_argument;
 
 namespace Exam1{
     class Wheel{

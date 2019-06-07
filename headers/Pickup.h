@@ -20,11 +20,26 @@ using std::cin;
 namespace Exam1{
     class Pickup : public Vehicle {
         private:
-        int hauling_capacity;
-        string currentlyHauling;
+        int hauling_capacity;//amount of weight in lbs that the pickup can haul
+        string currentlyHauling;//holds what the pickup is currently hauling 
+
         public:
+        //constructor
+        //sets values of capacity and calls vehicle constructor
+        //input: 
+        //      color - holds the color of the vehicle
+        //      capacity - holds the hauling capacity of the truck
+        //output: editing of values ofr instance
         Pickup(string color, int capacity);
+
+        //Changes what the pickup is currently hauling 
+        //input: NA
+        //output: cout statements
         void addCurrentHual();
+
+        //Returns a detailed description of the pickup including its color, topspeed, radius of wheels, number of wheels 
+        //input: NA
+        //output: Returns a string contains info about truck
         string Description();
     };
 }
